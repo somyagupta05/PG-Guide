@@ -5,3 +5,10 @@
 --string-varchar
 --date - date
 --boolean- boolean
+ --
+--deciaml(5,2)  total digit 5 out of which 2 are decimal
+ --
+--PRIMARY KEY
+--the primary key constraints uniquely identifies each record in a table
+--primary keys must contain unique values and cannot contain null values
+--a table can have only one primary key
