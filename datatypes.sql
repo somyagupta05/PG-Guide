@@ -1,0 +1,7 @@
+-- an attributr that specifies the type of data in a column of our database -table
+--
+ -- most widely used are
+--numeric-int double float DECIMAL
+--string-varchar
+--date - date
+--boolean- boolean
