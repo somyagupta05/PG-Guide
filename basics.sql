@@ -1,3 +1,5 @@
+to open: psql -U postgres ;
+
 postgres=# create database
 postgres-# test;
 
