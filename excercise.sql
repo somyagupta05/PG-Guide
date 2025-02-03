@@ -71,6 +71,7 @@ bank=# select max(salary) from employees;
  61000.00 (1 row);
 
 --  or
+-- can also do with limit but in case of limit its fixed how many persons you want to display 1 2 or 3.
 -- when you have more than one person
 bank=# select * from employees where salary=(select max(Salary) from employe
 es);
@@ -83,4 +84,8 @@ emp_id | fname | lname | email | dept | salary | hire_date --------+--------+---
  sum -----------
  206000.00 (1 row);
 
--- 11.AVERAGE SALARY PAYING IN EACH DEPARTMENT
+-- 11.AVERAGE SALARY PAYING IN EACH DEPARTMENT?
+bank=# select dept,avg(salary) from employees group by dept;
+ dept | avg -----------+--------------------
+ Marketing | 51000.000000000000 Finance | 60500.000000000000 IT | 51500.000000000000 HR | 46000.000000000000 (4 rows) ;
+
