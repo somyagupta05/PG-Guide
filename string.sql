@@ -119,3 +119,14 @@ bank=# select length(fname) from employees;
 bank=# select upper(fname) from employees;
  upper --------
  RAJ PRIYA ARJUN SUMAN KAVITA AMIT NEHA RAHUL ANJALI VIJAY (10 rows);
+
+--  .....................
+-- ...................
+-- LEFT AND RIGHT
+bank=# select left('hello world',4);
+ left ------
+ hell (1 row);
+
+bank=# select right('hello world',4);
+ right -------
+ orld (1 row);
