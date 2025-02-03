@@ -30,3 +30,9 @@ bank=# select avg(salary) from employees;
 bank=# select min(salary) from employees;
  min ----------
  45000.00 (1 row);
+
+--  ..........................
+-- MAX
+bank=# select max(salary) from employees;
+ max ----------
+ 61000.00 (1 row) ;
