@@ -1,0 +1,9 @@
+-- concat, concat_ws
+-- substr
+-- left, right
+-- length
+-- upper, lower
+-- trim,ltrim,rtrim
+-- replace
+-- position
+-- string_agg
