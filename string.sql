@@ -130,3 +130,23 @@ bank=# select left('hello world',4);
 bank=# select right('hello world',4);
  right -------
  orld (1 row);
+
+--  .....................
+-- ................
+-- TRIM
+-- to remove extra space
+bank=# select length('   Alright    ');
+ length --------
+ 14 (1 row);
+
+bank=# select length(trim('   Alright    '));
+ length --------
+ 7 (1 row);
+
+--  .....................
+-- ....................
+-- POSITION
+-- where is om in word thomas
+bank=# select position('om' in 'thomas');
+ position ----------
+ 3 (1 row);
