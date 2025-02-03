@@ -1,0 +1,2 @@
+-- use case
+-- No of employees in each dept
