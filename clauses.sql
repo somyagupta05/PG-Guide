@@ -89,3 +89,11 @@ bank=# select * from employees order by fname desc;
 bank=# select * from employees limit 3;
  emp_id | fname | lname | email | dept | salary | hire_date --------+-------+--------+-------------------------+------+----------+------------
  1 | Raj | Sharma | raj.sharma@example.com | IT | 50000.00 | 2020-01-15 2 | Priya | Singh | priya.singh@example.com | HR | 45000.00 | 2019-03-22 3 | Arjun | Verma | arjun.verma@example.com | IT | 55000.00 | 2021-06-01 (3 rows);
+
+--  ....................................
+-- ....................................
+-- LIKE CLAUSE
+-- starts with A and then anything else after that
+bank=# select * from employees where fname like 'A%';
+ emp_id | fname | lname | email | dept | salary | hire_date --------+--------+-------+--------------------------+-----------+----------+------------
+ 3 | Arjun | Verma | arjun.verma@example.com | IT | 55000.00 | 2021-06-01 6 | Amit | Gupta | amit.gupta@example.com | Marketing | 52000.00 | 2020-09-25 9 | Anjali | Mehta | anjali.mehta@example.com | Finance | 61000.00 | 2018-12-03 (3 rows);
