@@ -75,3 +75,9 @@ bank=# select replace('ABCXYZ','ABC','PQR');
 
 replace ---------
  PQRXYZ (1 row);
+
+--  changing dept from it to tech
+bank=# select replace(dept,'IT','Tech') from employees;
+
+replace -----------
+ Tech HR Tech Finance HR Marketing Tech Tech Finance Marketing (10 rows);
