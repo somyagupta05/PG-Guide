@@ -2,3 +2,5 @@
 -- where
 -- distinct
 -- order by
+-- limit
+-- like
