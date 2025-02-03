@@ -90,3 +90,20 @@ replace -----------
  reverse ---------
  jaR ayirP nujrA namuS ativaK timA aheN luhaR ilajnA yajiV (10 rows);
 
+-- ......................
+-- ..................
+-- length
+bank=# select length('hello');
+ length --------
+ 5 (1 row);
+
+--  ....
+bank=# select length(fname) from employees;
+ length --------
+ 3 5 5 5 6 4 4 5 6 5 (10 rows);
+
+--  ..............
+-- print where length of name is more than 5
+ bank=# select * from employees where length(fname) >5;
+ emp_id | fname | lname | email | dept | salary | hire_date --------+--------+-------+--------------------------+---------+----------+------------
+ 5 | Kavita | Rao | kavita.rao@example.com | HR | 47000.00 | 2020-11-10 9 | Anjali | Mehta | anjali.mehta@example.com | Finance | 61000.00 | 2018-12-03 (2 rows);
