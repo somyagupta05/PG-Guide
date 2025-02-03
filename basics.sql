@@ -1,5 +1,6 @@
 to open: psql -U postgres ;
 
+-- dont use semicolon in above line
 postgres=# create database
 postgres-# test;
 
