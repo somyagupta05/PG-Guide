@@ -112,3 +112,8 @@ bank=# select * from employees where fname like '%i%';
 bank=# select * from employees where dept like '__';
  emp_id | fname | lname | email | dept | salary | hire_date --------+--------+--------+-------------------------+------+----------+------------
  1 | Raj | Sharma | raj.sharma@example.com | IT | 50000.00 | 2020-01-15 2 | Priya | Singh | priya.singh@example.com | HR | 45000.00 | 2019-03-22 3 | Arjun | Verma | arjun.verma@example.com | IT | 55000.00 | 2021-06-01 5 | Kavita | Rao | kavita.rao@example.com | HR | 47000.00 | 2020-11-10 7 | Neha | Desai | neha.desai@example.com | IT | 48000.00 | 2019-05-18 8 | Rahul | Kumar | rahul.kumar@example.com | IT | 53000.00 | 2021-02-14 (6 rows) ;
+
+--  where first letter is anything but second should be a and then anything in the last
+bank=# select * from employees where fname like '_a%';
+ emp_id | fname | lname | email | dept | salary | hire_date --------+--------+--------+-------------------------+------+----------+------------
+ 1 | Raj | Sharma | raj.sharma@example.com | IT | 50000.00 | 2020-01-15 5 | Kavita | Rao | kavita.rao@example.com | HR | 47000.00 | 2020-11-10 8 | Rahul | Kumar | rahul.kumar@example.com | IT | 53000.00 | 2021-02-14 (3 rows);
