@@ -1,0 +1,4 @@
+-- conditions along with sql querry is clause
+-- where
+-- distinct
+-- order by
