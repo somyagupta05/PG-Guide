@@ -12,3 +12,9 @@
 bank=# select count(emp_id) from employees;
  count -------
  10 (1 row);
+
+--  ...................................
+-- SUM
+ bank=# select sum(salary) from employees;
+ sum -----------
+ 521000.00 (1 row);
