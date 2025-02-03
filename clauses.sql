@@ -22,4 +22,12 @@ bank=# select * from employees where dept='HR' or dept='Finance';
 --  AND............
 bank=# select * from employees where dept='IT' and salary>50000;
  emp_id | fname | lname | email | dept | salary | hire_date --------+-------+-------+-------------------------+------+----------+------------
- 3 | Arjun | Verma | arjun.verma@example.com | IT | 55000.00 | 2021-06-01 8 | Rahul | Kumar | rahul.kumar@example.com | IT | 53000.00 | 2021-02-14 (2 rows)
+ 3 | Arjun | Verma | arjun.verma@example.com | IT | 55000.00 | 2021-06-01 8 | Rahul | Kumar | rahul.kumar@example.com | IT | 53000.00 | 2021-02-14 (2 rows);
+
+--  REALTIONAL OPERATORS
+-- < LESS THAN
+-- > GRRETAER THAN
+-- <= LESS THAN OR EQUAL TO
+-- >= GREATER THAN OR EQUAL TO
+-- = EQUAL TO
+-- != NOT EQAUL TO
