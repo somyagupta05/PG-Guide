@@ -81,3 +81,12 @@ bank=# select replace(dept,'IT','Tech') from employees;
 
 replace -----------
  Tech HR Tech Finance HR Marketing Tech Tech Finance Marketing (10 rows);
+
+--  .....................
+-- ...................
+-- REVERSE
+-- reversed all fnames
+ bank=# select reverse(fname) from employees;
+ reverse ---------
+ jaR ayirP nujrA namuS ativaK timA aheN luhaR ilajnA yajiV (10 rows);
+
