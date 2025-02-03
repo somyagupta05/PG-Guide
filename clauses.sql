@@ -67,4 +67,12 @@ dept -----------
 -- but here after using distinct you are getting all different values
 bank=# select distinct dept from employees;
  dept -----------
- Marketing Finance IT HR (4 rows)
+ Marketing Finance IT HR (4 rows);
+
+--  ..........................
+-- ...................................
+-- ORDER BY
+-- sorted alphabetically
+bank=# select * from employees order by fname;
+ emp_id | fname | lname | email | dept | salary | hire_date --------+--------+--------+--------------------------+-----------+----------+------------
+ 6 | Amit | Gupta | amit.gupta@example.com | Marketing | 52000.00 | 2020-09-25 9 | Anjali | Mehta | anjali.mehta@example.com | Finance | 61000.00 | 2018-12-03 3 | Arjun | Verma | arjun.verma@example.com | IT | 55000.00 | 2021-06-01 5 | Kavita | Rao | kavita.rao@example.com | HR | 47000.00 | 2020-11-10 7 | Neha | Desai | neha.desai@example.com | IT | 48000.00 | 2019-05-18 2 | Priya | Singh | priya.singh@example.com | HR | 45000.00 | 2019-03-22 8 | Rahul | Kumar | rahul.kumar@example.com | IT | 53000.00 | 2021-02-14 1 | Raj | Sharma | raj.sharma@example.com | IT | 50000.00 | 2020-01-15 4 | Suman | Patel | suman.patel@example.com | Finance | 60000.00 | 2018-07-30 10 | Vijay | Nair | vijay.nair@example.com | Marketing | 50000.00 | 2020-04-19 (10 rows);
