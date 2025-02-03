@@ -57,3 +57,14 @@ where salary between 50000 and 60000... ^ bank=# select * from employees where s
 -- ...............................
 -- DISTINCT CLAUSE
 -- To get unique values
+-- here you are getting in repetion
+bank=# select dept from employees
+bank-# ;
+
+dept -----------
+ IT HR IT Finance HR Marketing IT IT Finance Marketing (10 rows);
+
+-- but here after using distinct you are getting all different values
+bank=# select distinct dept from employees;
+ dept -----------
+ Marketing Finance IT HR (4 rows)
