@@ -1,0 +1,4 @@
+-- USE CASES
+-- how to find total number of employees?
+-- employees with max salary?
+-- Average salary of employees
