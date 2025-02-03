@@ -18,3 +18,15 @@ bank=# select count(emp_id) from employees;
  bank=# select sum(salary) from employees;
  sum -----------
  521000.00 (1 row);
+
+--  ..............................
+-- AVG
+bank=# select avg(salary) from employees;
+ avg --------------------
+ 52100.000000000000 (1 row);
+
+--  ...................................
+-- MIN
+bank=# select min(salary) from employees;
+ min ----------
+ 45000.00 (1 row);
