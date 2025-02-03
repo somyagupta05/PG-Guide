@@ -43,3 +43,12 @@ bank=# select * from employees where dept not in ('IT','HR','Finance');
  emp_id | fname | lname | email | dept | salary | hire_date --------+-------+-------+------------------------+-----------+----------+------------
  6 | Amit | Gupta | amit.gupta@example.com | Marketing | 52000.00 | 2020-09-25 10 | Vijay | Nair | vijay.nair@example.com | Marketing | 50000.00 | 2020-04-19 (2 rows) ;
 
+-- ............................
+-- BETWEEN OPERATOR
+bank=# select * from employess where salary between 50000 and 60000;
+ERROR: relation "employess" does not exist LINE 1:
+select *
+from employess
+where salary between 50000 and 60000... ^ bank=# select * from employees where salary between 50000 and 60000;
+ emp_id | fname | lname | email | dept | salary | hire_date --------+-------+--------+-------------------------+-----------+----------+------------
+ 1 | Raj | Sharma | raj.sharma@example.com | IT | 50000.00 | 2020-01-15 3 | Arjun | Verma | arjun.verma@example.com | IT | 55000.00 | 2021-06-01 4 | Suman | Patel | suman.patel@example.com | Finance | 60000.00 | 2018-07-30 6 | Amit | Gupta | amit.gupta@example.com | Marketing | 52000.00 | 2020-09-25 8 | Rahul | Kumar | rahul.kumar@example.com | IT | 53000.00 | 2021-02-14 10 | Vijay | Nair | vijay.nair@example.com | Marketing | 50000.00 | 2020-04-19 (6 rows);
