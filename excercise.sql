@@ -50,3 +50,37 @@ bank=# select * from employees where length(lname)=4;
  emp_id | fname | lname | email | dept | salary | hire_date --------+-------+-------+------------------------+-----------+----------+------------
  10 | Vijay | Nair | vijay.nair@example.com | Marketing | 50000.00 | 2020-04-19 (1 row);
 
+-- 6.FIND TOTAL NUMBER OF EMPLOYEES IN DATABASE?
+bank=# select count(emp_id) from employees;
+ count -------
+ 10 (1 row);
+
+-- 7. FIND NUMBER OF EMPLOYEES IN EACH DEPARTMENT?
+bank=# select dept,count(emp_id) from employees group by dept;
+ dept | count -----------+-------
+ Marketing | 2 Finance | 2 IT | 4 HR | 2 (4 rows);
+
+-- 8. FIND LOWEST SALARY PAYIING?
+ bank=# select min(salary) from employees;
+ min ----------
+ 45000.00 (1 row);
+
+-- 9.FIND HIGHEST SALARY PAYING?
+bank=# select max(salary) from employees;
+ max ----------
+ 61000.00 (1 row);
+
+--  or
+-- when you have more than one person
+bank=# select * from employees where salary=(select max(Salary) from employe
+es);
+
+emp_id | fname | lname | email | dept | salary | hire_date --------+--------+-------+--------------------------+---------+----------+------------
+ 9 | Anjali | Mehta | anjali.mehta@example.com | Finance | 61000.00 | 2018-12-03 (1 row);
+
+-- 10.FIND TOTAL SALARY PAYING IN IT DEPARTMENT?
+ bank=# select sum(salary) from employees where dept='IT';
+ sum -----------
+ 206000.00 (1 row);
+
+-- 11.AVERAGE SALARY PAYING IN EACH DEPARTMENT
