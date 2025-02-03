@@ -63,3 +63,15 @@ bank=# select substr('hello world',1,5);
 bank=# select substr('hello world',1,6);
  substr --------
  hello (1 row);
+
+bank=# select substr('hello world',6,9);
+ substr --------
+ world (1 row);
+
+-- ........................
+-- ............
+-- REPLACE
+bank=# select replace('ABCXYZ','ABC','PQR');
+
+replace ---------
+ PQRXYZ (1 row);
