@@ -107,3 +107,15 @@ bank=# select length(fname) from employees;
  bank=# select * from employees where length(fname) >5;
  emp_id | fname | lname | email | dept | salary | hire_date --------+--------+-------+--------------------------+---------+----------+------------
  5 | Kavita | Rao | kavita.rao@example.com | HR | 47000.00 | 2020-11-10 9 | Anjali | Mehta | anjali.mehta@example.com | Finance | 61000.00 | 2018-12-03 (2 rows);
+
+-- ....................
+-- .......................
+--  UPPER AND LOWER
+-- mostly used in presentaion
+ bank=# select lower(fname) from employees;
+ lower --------
+ raj priya arjun suman kavita amit neha rahul anjali vijay (10 rows);
+
+bank=# select upper(fname) from employees;
+ upper --------
+ RAJ PRIYA ARJUN SUMAN KAVITA AMIT NEHA RAHUL ANJALI VIJAY (10 rows);
