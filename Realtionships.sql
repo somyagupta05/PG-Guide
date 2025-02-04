@@ -7,3 +7,5 @@
  -- 2. ONR TO MANY -- two tables employees and employee task raju is once in employees but in employee task raju's task are more than one so he has come more than one time its one to many.
 --
  --  3.MANY TO MANY --if a book has more than one author and one author have written more than one book then its many to many
+--
+ -- FOREIGN KEY -- IF IN ONE TABLE WE ARE USING OTHER TABLES PRIMARY KEY THEN IN SECOND TABLE ITS CALLED AS FOREIGN KEY
