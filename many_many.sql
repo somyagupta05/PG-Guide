@@ -7,3 +7,32 @@ create table courses(c_id serial primary key, name varchar(100) not null, fee nu
 create table enrollment(enrollment_id serial primary key, s_id int not null, c_id int not null, enrollment_date date not null,
                         foreign key (s_id) references students(s_id),
                         foreign key (c_id) references courses(c_id));
+
+
+insert into students (name)
+values ('Raju'), ('Sham'), ('Alex');
+
+
+insert into courses (name,fee)
+values ('Maths',
+        500.00), ('Physics',
+                  600.00), ('Chemistry',
+                            700.00);
+
+
+insert into enrollment(s_id,c_id,enrollment_date)
+values (1,
+        1,
+        '2024-01-01'), --Raju enrolled in Mathematics
+(1,
+ 2,
+ '2024-01-15'), --Raju enrolled in Physics
+(2,
+ 1,
+ '2024-02-01'), --sham enrolled in Mathematics
+(2,
+ 3,
+ '2024-02-15'), --sham enrolled in Chemistry
+(3,
+ 3,
+ '2024-03-25'); --Sham enrolled in Chemistry
