@@ -21,4 +21,13 @@ for relation "person" violates check constraint "person_mob_check" DETAIL: Faili
 
 INSERT 0 1 postgres=# select * from person;
  id | fname | city | age | mob -----+-------+----------+-----+------------
- 102 | Sham | Mumbai | 0 | 103 | Paul | Chennai | 0 | 101 | Raju | Banglore | 0 | | | | 0 | 1234567890 (4 rows)
+ 102 | Sham | Mumbai | 0 | 103 | Paul | Chennai | 0 | 101 | Raju | Banglore | 0 | | | | 0 | 1234567890 (4 rows);
+
+--  adding contraint so that you can add any number of digits
+postgres=# alter table person drop constraint person_mob_check;
+
+ALTER TABLE postgres=# insert into person(mob) values (123);
+
+INSERT 0 1 postgres=# select * from person;
+ id | fname | city | age | mob -----+-------+----------+-----+------------
+ 102 | Sham | Mumbai | 0 | 103 | Paul | Chennai | 0 | 101 | Raju | Banglore | 0 | | | | 0 | 1234567890 | | | 0 | 123 (5 rows);
