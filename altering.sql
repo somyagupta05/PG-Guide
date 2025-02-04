@@ -49,4 +49,10 @@ ALTER TABLE postgres=# \d person
  Table "public.person" Column | Type | Collation | Nullable | Default --------+------------------------+-----------+----------+-----------------------------
  id | integer | | | fname | character varying(150) | | | 'unknow'::character varying city | character varying(100) | | | age | integer | | | 0 ;
 
---  to set not null
+-- to drop default
+postgres=# alter table person alter column fname drop default;
+
+ALTER TABLE postgres=# \d person
+ Table "public.person" Column | Type | Collation | Nullable | Default --------+------------------------+-----------+----------+---------
+ id | integer | | | fname | character varying(150) | | | city | character varying(100) | | | age | integer | | | 0;
+
