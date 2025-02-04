@@ -1,0 +1,6 @@
+-- join operation is used to combine rows from two or more tables based on a related column between them.
+ -- types of join
+-- 1. cross join--every row from one table is combined with every row from another table
+-- 2. inner join
+-- 3. left join
+-- 4. right join
