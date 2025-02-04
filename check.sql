@@ -1,0 +1,2 @@
+-- how to make sure phone number is of 10 digits only
+-- used for validity and verification of data.
