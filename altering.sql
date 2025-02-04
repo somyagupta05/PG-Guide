@@ -19,3 +19,17 @@ postgres=# alter table person add column age int default 0;
 ALTER TABLE postgres=# select * from person;
  id | name | city | age -----+------+----------+-----
  102 | Sham | Mumbai | 0 103 | Paul | Chennai | 0 101 | Raju | Banglore | 0 (3 rows) ;
+
+--  how to rename a column
+postgres=# alter table person rename column name to fname;
+
+ALTER TABLE postgres=# select * from person;
+ id | fname | city | age -----+-------+----------+-----
+ 102 | Sham | Mumbai | 0 103 | Paul | Chennai | 0 101 | Raju | Banglore | 0 (3 rows) ;
+
+--  how to rename table name
+
+alter table contacts rename to mycontacts;
+
+-- another way
+rename table contacts to mycontacts;
