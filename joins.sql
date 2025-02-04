@@ -33,4 +33,12 @@ cust_name | sum -----------+--------
 --
 -- 3. left join-- returns all rows from the left(or first) table and the matching rowsa from the right (or second) table.
 -- in venn diagram we have a and b so full a part is coverred full circle including some overlapped b part ie full a.
+storedb=# select * from customers c left join orders o on c.cust_id=o.cust_id;
+ cust_id | cust_name | ord_id | ord_date | price | cust_id ---------+-----------+--------+------------+--------+---------
+ 1 | Raju | 1 | 2024-01-01 | 250.00 | 1 1 | Raju | 2 | 2024-01-15 | 300.00 | 1 2 | Sham | 3 | 2024-02-01 | 150.00 | 2 3 | Paul | 4 | 2024-03-01 | 450.00 | 3 2 | Sham | 5 | 2024-04-04 | 550.00 | 2 4 | Alex | | | | (6 rows) ;
+
 -- 4. right join
+-- display right side full data
+storedb=# select * from customers c right join orders o on c.cust_id=o.cust_id;
+ cust_id | cust_name | ord_id | ord_date | price | cust_id ---------+-----------+--------+------------+--------+---------
+ 1 | Raju | 1 | 2024-01-01 | 250.00 | 1 1 | Raju | 2 | 2024-01-15 | 300.00 | 1 2 | Sham | 3 | 2024-02-01 | 150.00 | 2 3 | Paul | 4 | 2024-03-01 | 450.00 | 3 2 | Sham | 5 | 2024-04-04 | 550.00 | 2 (5 rows);
