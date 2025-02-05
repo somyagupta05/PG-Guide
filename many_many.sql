@@ -40,3 +40,11 @@ values (1,
 institute=# select s.name, c.name from enrollment e join students s on e.s_id=s.s_id join courses c on c.c_id=e.c_id;
  name | name ------+-----------
  Raju | Maths Raju | Physics Sham | Maths Sham | Chemistry Alex | Chemistry (5 rows);
+
+institute=# select s.name, c.name,c.fee, e.enrollment_date from enrollment e
+
+join students s on e.s_id=s.s_id
+join courses c on c.c_id=e.c_id;
+
+name | name | fee | enrollment_date ------+-----------+--------+-----------------
+ Raju | Maths | 500.00 | 2024-01-01 Raju | Physics | 600.00 | 2024-01-15 Sham | Maths | 500.00 | 2024-02-01 Sham | Chemistry | 700.00 | 2024-02-15 Alex | Chemistry | 700.00 | 2024-03-25 (5 rows);
