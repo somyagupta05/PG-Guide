@@ -48,3 +48,10 @@ join courses c on c.c_id=e.c_id;
 
 name | name | fee | enrollment_date ------+-----------+--------+-----------------
  Raju | Maths | 500.00 | 2024-01-01 Raju | Physics | 600.00 | 2024-01-15 Sham | Maths | 500.00 | 2024-02-01 Sham | Chemistry | 700.00 | 2024-02-15 Alex | Chemistry | 700.00 | 2024-03-25 (5 rows);
+
+^ institute=# select s.name as student_name, c.name as course_name,c.fee as fees, e.enrollment_date as enrollment_date from enrollment e join students s o
+n e.s_id=s.s_id
+join courses c on c.c_id=e.c_id;
+
+student_name | course_name | fees | enrollment_date --------------+-------------+--------+-----------------
+ Raju | Maths | 500.00 | 2024-01-01 Raju | Physics | 600.00 | 2024-01-15 Sham | Maths | 500.00 | 2024-02-01 Sham | Chemistry | 700.00 | 2024-02-15 Alex | Chemistry | 700.00 | 2024-03-25 (5 rows)
