@@ -71,3 +71,7 @@ projectdb=# select * from order_items oi join products p on oi.p_id=p.p_id;
 projectdb=# select c.cust_name,p.p_name,oi.quantity,o.ord_date from order_items oi join products p on oi.p_id=p.p_id join orders o on o.ord_id=oi.ord_id join customers c on o.cust_id=c.cust_id;
  cust_name | p_name | quantity | ord_date -----------+----------+----------+------------
  Raju | Laptop | 1 | 2024-01-01 Raju | Cable | 2 | 2024-01-01 Sham | Laptop | 1 | 2024-02-01 Paul | Mouse | 1 | 2024-03-01 Paul | Cable | 5 | 2024-03-01 Sham | Keyboard | 1 | 2024-04-04 (6 rows);
+
+projectdb=# select c.cust_name,p.p_name,p.price,oi.quantity,o.ord_date,(oi.quantity*p.price) as total_price from order_items oi join products p on oi.p_id=p.p_id join orders o on o.ord_id=oi.ord_id join customers c on o.cust_id=c.cust_id;
+ cust_name | p_name | price | quantity | ord_date | total_price -----------+----------+----------+----------+------------+-------------
+ Raju | Laptop | 55000.00 | 1 | 2024-01-01 | 55000.00 Raju | Cable | 250.00 | 2 | 2024-01-01 | 500.00 Sham | Laptop | 55000.00 | 1 | 2024-02-01 | 55000.00 Paul | Mouse | 500 | 1 | 2024-03-01 | 500 Paul | Cable | 250.00 | 5 | 2024-03-01 | 1250.00 Sham | Keyboard | 800.00 | 1 | 2024-04-04 | 800.00 (6 rows);
