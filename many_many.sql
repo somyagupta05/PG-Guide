@@ -36,3 +36,7 @@ values (1,
 (3,
  3,
  '2024-03-25'); --Sham enrolled in Chemistry
+
+institute=# select s.name, c.name from enrollment e join students s on e.s_id=s.s_id join courses c on c.c_id=e.c_id;
+ name | name ------+-----------
+ Raju | Maths Raju | Physics Sham | Maths Sham | Chemistry Alex | Chemistry (5 rows);
