@@ -63,3 +63,4 @@ VALUES ('Laptop',
                     500), ('Keyboard',
                            800.00), ('Cable',
                                      250.00) ;
+
