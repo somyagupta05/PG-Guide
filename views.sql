@@ -24,3 +24,9 @@ from billing_info
 group by p_name;
 
 -- along with groupby you can not use where you have to use having
+
+select p_name,
+       sum(total_price)
+from billing_info
+group by p_name
+having sum(total_price)>1500;
