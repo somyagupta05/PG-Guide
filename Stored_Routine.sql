@@ -44,6 +44,45 @@ SELECT e.emp_id,
 FROM employees e
 WHERE e.dept = 'HR'
   AND e.salary =
-    ( SELECT MAX(emp.salary)
+    (SELECT MAX(emp.salary)
      FROM employees emp
      WHERE emp.dept = 'HR' );
+
+--  CREATE CUSTOME FUNCTION BY WRITTING THIS QUERY THEN LATER YOU CAN USUALLY do it easily
+
+CREATE OR REPLACE FUNCTION dept_max_sal_emp1(dept_name VARCHAR) RETURNS TABLE(emp_id INT, fname VARCHAR, salary NUMERIC) AS $$
+
+BEGIN
+
+    RETURN QUERY
+
+    SELECT
+
+        e.emp_id,  e.fname, e.salary
+
+    FROM
+
+        employees e
+
+    WHERE
+
+        e.dept = dept_name
+
+        AND e.salary = (
+
+            SELECT MAX(emp.salary)
+
+            FROM employees emp
+
+            WHERE emp.dept = dept_name
+
+        );
+
+END;
+
+$$ LANGUAGE plpgsql;
+
+-- querry to write after it
+
+select *
+FROM dept_max_sal_emp1('HR')
