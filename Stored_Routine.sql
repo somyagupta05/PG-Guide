@@ -34,3 +34,6 @@ $$;
 -- only have to write this much to update now
 call update_emp_salary(3,71000);
 
+-- .........................................
+-- USER DEFINED FUNCTIONS
+-- Custom functions created by the user to perform specific operations and return a value.
