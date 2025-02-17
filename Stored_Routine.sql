@@ -11,4 +11,7 @@ and procedural logic that can
 perform operations such as inserting,
         updating,
         deleting
-and querying data.
+and querying data. To
+update something in data you hav to write big big
+update querry so this is the alternative
+for that.
