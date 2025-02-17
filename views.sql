@@ -1,0 +1,2 @@
+-- we use views to keep querries stored
+-- for examplr you have run join querry on two table now you want that table to be stored somewhere so that you dont have to write full querry again and again so you use create views
