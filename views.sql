@@ -16,4 +16,9 @@ join customers c on o.cust_id=c.cust_id;
 -- so this is the way to sotre
 
 select *
+from billing_info -- group by in billling
+
+select p_name,
+       sum(total_price)
 from billing_info
+group by p_name;
