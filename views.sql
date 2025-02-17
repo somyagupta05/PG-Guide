@@ -32,4 +32,9 @@ group by p_name
 having sum(total_price)>1500;
 
 p_name | sum --------+-----------
- Cable | 1750.00 Laptop | 110000.00 (2 rows)
+ Cable | 1750.00 Laptop | 110000.00 (2 rows) --  ROLLUP
+-- IF you want to print total in the last then :
+projectdb=# select coalesce(p_name,'Total'), sum(total_price) as amount from
+ billing_info
+group by rollup(p_name)
+order by amount;
