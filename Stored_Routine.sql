@@ -31,3 +31,6 @@ END;
 
 $$;
 
+-- only have to write this much to update now
+call update_emp_salary(3,71000);
+
