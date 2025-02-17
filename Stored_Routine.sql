@@ -6,12 +6,28 @@
 --  1. stored procedure
 -- 2. user defined functions
  -- STORED PROCEDURE
-set of sql statement
-and procedural logic that can
-perform operations such as inserting,
-        updating,
-        deleting
-and querying data. To
-update something in data you hav to write big big
-update querry so this is the alternative
-for that.
+-- set of sql statement
+-- and procedural logic that can
+-- perform operations such as inserting,
+--         updating,
+--         deleting
+-- and querying data. To
+-- update something in data you hav to write big big
+-- update querry so this is the alternative
+-- for that.
+ -- run it once then
+
+CREATE OR REPLACE PROCEDURE update_emp_salary(p_employee_id INT, p_new_salary NUMERIC) LANGUAGE plpgsql AS $$
+
+BEGIN
+
+    UPDATE employees
+
+    SET salary = p_new_salary
+
+    WHERE emp_id = p_employee_id;
+
+END;
+
+$$;
+
