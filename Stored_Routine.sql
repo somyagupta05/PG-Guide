@@ -5,3 +5,10 @@
  -- Types of stored routine
 --  1. stored procedure
 -- 2. user defined functions
+ -- STORED PROCEDURE
+set of sql statement
+and procedural logic that can
+perform operations such as inserting,
+        updating,
+        deleting
+and querying data.
