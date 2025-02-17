@@ -37,3 +37,13 @@ call update_emp_salary(3,71000);
 -- .........................................
 -- USER DEFINED FUNCTIONS
 -- Custom functions created by the user to perform specific operations and return a value.
+
+SELECT e.emp_id,
+       e.fname,
+       e.salary
+FROM employees e
+WHERE e.dept = 'HR'
+  AND e.salary =
+    ( SELECT MAX(emp.salary)
+     FROM employees emp
+     WHERE emp.dept = 'HR' );
