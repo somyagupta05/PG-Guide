@@ -30,3 +30,6 @@ select p_name,
 from billing_info
 group by p_name
 having sum(total_price)>1500;
+
+p_name | sum --------+-----------
+ Cable | 1750.00 Laptop | 110000.00 (2 rows)
