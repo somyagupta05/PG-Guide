@@ -23,4 +23,4 @@ select p_name,
 from billing_info
 group by p_name;
 
--- along with groupby you can not use where
+-- along with groupby you can not use where you have to use having
