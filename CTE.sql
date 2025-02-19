@@ -18,3 +18,6 @@ where e.salary>a.avg_salary;
 
 emp_id | fname | dept | salary | avg_salary --------+--------+-----------+----------+--------------------
  5 | Kavita | HR | 47000.00 | 46000.000000000000 6 | Amit | Marketing | 52000.00 | 51000.000000000000 9 | Anjali | Finance | 61000.00 | 60500.000000000000 3 | Arjun | IT | 71000.00 | 55500.000000000000;
+
+--  USE CASE 2:
+-- we want to find the highest-paid employee in each department.
