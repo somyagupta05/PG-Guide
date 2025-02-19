@@ -13,3 +13,11 @@ end;
 $$ language plpgsql;
 
 -- to create trigger
+
+create or replace function check_salary() returns trigger as $$ begin
+	if new.salary<0 then
+		new.salary=0;
+	end if;
+	return new;
+end;
+$$ language plpgsql;
