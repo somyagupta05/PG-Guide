@@ -33,3 +33,9 @@ select e.emp_id,
 from employees e
 join max_sal m on e.dept=m.dept
 where e.salary=m.max_salary;
+
+bank-#
+where e.salary=m.max_salary;
+
+emp_id | fname | dept | salary --------+--------+-----------+----------
+ 5 | Kavita | HR | 47000.00 6 | Amit | Marketing | 52000.00 9 | Anjali | Finance | 61000.00 3 | Arjun | IT | 71000.00 (4 rows);
