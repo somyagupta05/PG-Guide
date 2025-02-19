@@ -21,3 +21,15 @@ emp_id | fname | dept | salary | avg_salary --------+--------+-----------+------
 
 --  USE CASE 2:
 -- we want to find the highest-paid employee in each department.
+with max_sal as
+  (select dept,
+          max(salary) as max_salary
+   from employees
+   group by dept)
+select e.emp_id,
+       e.fname,
+       e.dept,
+       e.salary
+from employees e
+join max_sal m on e.dept=m.dept
+where e.salary=m.max_salary;
