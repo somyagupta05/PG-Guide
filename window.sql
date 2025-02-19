@@ -64,3 +64,9 @@ fname | salary | rank --------+----------+------
  Arjun | 71000.00 | 1 Anjali | 61000.00 | 2 Suman | 60000.00 | 3 Rahul | 53000.00 | 4 Amit | 52000.00 | 5 Raj | 50000.00 | 6 Vijay | 50000.00 | 6 Neha | 48000.00 | 8 Kavita | 47000.00 | 9 Priya | 45000.00 | 10;
 
 --  DENSE_RANK()
+
+select fname,
+       salary,
+       dense_rank() over(
+                         order by salary desc)
+from employees;
