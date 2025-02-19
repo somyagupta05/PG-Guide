@@ -1,0 +1,2 @@
+-- window functions, also known as analytic functions allow you to perform calculation across a set of rows related to the current row.
+-- Defined by an OVER() clause.
