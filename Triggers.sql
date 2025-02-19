@@ -21,3 +21,6 @@ create or replace function check_salary() returns trigger as $$ begin
 	return new;
 end;
 $$ language plpgsql;
+
+-- try to set value at negative it will not be set instead it will be set to 00 after running above two queries if you dont run these 2 querries it would have been set to -ve.
+ call update_emp_salary(2,-52000);
