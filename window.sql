@@ -50,3 +50,17 @@ employees;
 
 row_number | fname | dept | salary ------------+--------+-----------+----------
  1 | Anjali | Finance | 61000.00 2 | Suman | Finance | 60000.00 1 | Priya | HR | 45000.00 2 | Kavita | HR | 47000.00 1 | Arjun | IT | 71000.00 2 | Neha | IT | 48000.00 3 | Rahul | IT | 53000.00 4 | Raj | IT | 50000.00 1 | Vijay | Marketing | 50000.00 2 | Amit | Marketing | 52000.00;
+
+--  RANK()
+-- it will rank correctly as done but if there are two of same rank it will give them same rank like 1 1 but to the next it ie third it will give rank 3 not 2 so this is the problem it should give rank 2 to overcome this we have dense rank()
+
+select fname,
+       salary,
+       rank() over(
+                   order by salary desc)
+from employees;
+
+fname | salary | rank --------+----------+------
+ Arjun | 71000.00 | 1 Anjali | 61000.00 | 2 Suman | 60000.00 | 3 Rahul | 53000.00 | 4 Amit | 52000.00 | 5 Raj | 50000.00 | 6 Vijay | 50000.00 | 6 Neha | 48000.00 | 8 Kavita | 47000.00 | 9 Priya | 45000.00 | 10;
+
+--  DENSE_RANK()
