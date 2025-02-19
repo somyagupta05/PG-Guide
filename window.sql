@@ -26,3 +26,27 @@ select fname,
        avg(salary) over(
                         order by salary)
 from employees;
+
+-- ROW_NUMBER
+
+select row_number() over(
+                         order by fname),
+                    fname,
+                    dept,
+                    salary
+from employees;
+
+row_number | fname | dept | salary ------------+--------+-----------+----------
+ 1 | Amit | Marketing | 52000.00 2 | Anjali | Finance | 61000.00 3 | Arjun | IT | 71000.00 4 | Kavita | HR | 47000.00 5 | Neha | IT | 48000.00 6 | Priya | HR | 45000.00 7 | Rahul | IT | 53000.00 8 | Raj | IT | 50000.00 9 | Suman | Finance | 60000.00 10 | Vijay | Marketing | 50000.00;
+
+
+select row_number() over(partition by dept),
+                    fname,
+                    dept,
+                    salary
+from employees;
+
+employees;
+
+row_number | fname | dept | salary ------------+--------+-----------+----------
+ 1 | Anjali | Finance | 61000.00 2 | Suman | Finance | 60000.00 1 | Priya | HR | 45000.00 2 | Kavita | HR | 47000.00 1 | Arjun | IT | 71000.00 2 | Neha | IT | 48000.00 3 | Rahul | IT | 53000.00 4 | Raj | IT | 50000.00 1 | Vijay | Marketing | 50000.00 2 | Amit | Marketing | 52000.00;
