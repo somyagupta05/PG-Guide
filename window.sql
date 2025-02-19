@@ -76,3 +76,9 @@ from employees;
 bank=# select fname,salary ,Lag(salary) over() from employees;
  fname | salary | lag --------+----------+----------
  Raj | 50000.00 | Priya | 45000.00 | 50000.00 Suman | 60000.00 | 45000.00 Kavita | 47000.00 | 60000.00 Amit | 52000.00 | 47000.00 Neha | 48000.00 | 52000.00 Rahul | 53000.00 | 48000.00 Anjali | 61000.00 | 53000.00 Vijay | 50000.00 | 61000.00 Arjun | 71000.00 | 50000.00;
+
+--  LEAD()
+-- it will give salry of second row in first third row in second and null in last ie removes first salary
+bank=# select fname,salary ,Lag(salary) over() from employees;
+ fname | salary | lag --------+----------+----------
+ Raj | 50000.00 | Priya | 45000.00 | 50000.00 Suman | 60000.00 | 45000.00 Kavita | 47000.00 | 60000.00 Amit | 52000.00 | 47000.00 Neha | 48000.00 | 52000.00 Rahul | 53000.00 | 48000.00 Anjali | 61000.00 | 53000.00 Vijay | 50000.00 | 61000.00 Arjun | 71000.00 | 50000.00
