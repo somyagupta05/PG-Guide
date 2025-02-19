@@ -1,1 +1,4 @@
 -- CTE(Common Table Expression) is a temporary result set that you can define within a query to simplify complex sql statements.
+-- .................................................
+ -- use case 1:
+-- we want to calculate the avergae salary per department and then find all employees whose salary is above the average salry of thie department.
